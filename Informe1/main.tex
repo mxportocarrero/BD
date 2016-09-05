@@ -3,6 +3,22 @@
 \usepackage[utf8]{inputenc}
 \usepackage[right=2cm,left=3cm,top=2cm,bottom=2cm,headsep=0cm,footskip=0.5cm]{geometry}
 \usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{light-gray}{gray}{0.95}
+
+\lstset{
+	language = bash,
+	basicstyle = \small\ttfamily,
+	columns = flexible,
+	breaklines = true,
+	backgroundcolor = \color{light-gray},
+	xleftmargin=0.5cm,
+	frame=tlbr,
+	framesep=4pt,
+	framerule=0pt,
+}
 
 
 \linespread{1}
@@ -18,9 +34,10 @@
 \thispagestyle{empty}
 \begin{center}
 \Large
+\textbf{
 UNIVERSIDAD NACIONAL DE SAN AGUSTIN\\
 FACULTAD DE PRODUCCIÓN Y SERVICIOS\\
-ESCUELA DE CIENCIA DE LA COMPUTACIÓN\\
+ESCUELA DE CIENCIA DE LA COMPUTACIÓN\\}
 
 \vspace{1.5cm}
 \begin{figure}[hb]
@@ -28,10 +45,10 @@ ESCUELA DE CIENCIA DE LA COMPUTACIÓN\\
 	\includegraphics[width=0.6\textwidth]{jpg/logoCS_UNSA.jpg}
 \end{figure}
 
-BASES DE DATOS I\\
+\textbf{BASES DE DATOS I\\}
 Prof a Cargo: Ing. Fredy Gonzales Saji\\
 \vspace{1cm}
-PRACTICA Nro 1: INSTALACIÓN POSTGRESQL
+\textbf{PRACTICA Nro 1: INSTALACIÓN POSTGRESQL}
 
 \vspace{2cm}
 
@@ -65,7 +82,33 @@ aqui va la definición
 \subsection{Características}
 
 \section{Installación}
-\subsection{Windows}
-\subsection{Linux}
+la versión que instalaremos será PostgreSQL 9.5
+\subsection{CentOS 7 - Servidor}
+Lo primero que vamos a hacer es agregar la dirección de la que vamos a descargar el PostgreSQL.
+
+\begin{lstlisting}
+rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm
+\end{lstlisting}
+
+Actualizamos nuestra lista de repositorios
+
+\begin{lstlisting}
+yum update
+\end{lstlisting}
+
+seguimos con la instalación del servidor y herramientas de desarrollo
+\begin{lstlisting}
+yum install postgresql95-server postgresql95-contrib
+\end{lstlisting}
+
+
+\subsection{Windows - Cliente}
+
+\section{Conclusiones}
+\begin{itemize}
+\item Primera Conclusión
+\item Primera Conclusión
+\item Primera Conclusión
+\end{itemize}
 
 \end{document}
